@@ -8,15 +8,13 @@ type Props = {}
 
 const TodoList = (props: Props) => {
 
-  // Get the string value from local storage
 let fetchedstring = localStorage.getItem("todoData");
 
 if (fetchedstring === null) {
-  fetchedstring = "[]";  // default value is an empty array
+  fetchedstring = "[]";  
 }
 
 
-// Convert the string to an array
 const parsedString = JSON.parse(fetchedstring);
 
 console.log(parsedString); 
@@ -36,7 +34,6 @@ console.log(parsedString);
             localStorage.setItem("todoData", arrayString);
 
         } else {
-          // The user clicked Cancel, so do nothing
           return
         }
   /* eslint-enable no-restricted-globals */
